@@ -17,7 +17,7 @@ tf.disable_v2_behavior()
 ```
 
 ## 训练图（准确率与损失值）
-![准确率和损失值图](image/Accuracy&Loss.png)  
+![准确率和损失值图](./image/Accuracy&Loss.png)  
 
 ## 预测结果图
-![预测结果图](image/Prediction.jpg)
+![预测结果图](./image/Prediction.jpg)
