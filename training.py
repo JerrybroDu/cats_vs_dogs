@@ -30,6 +30,7 @@ train_img, train_label = input_data.get_files(train_dir)
 # 读取队列中的数据
 train_batch, train_label_batch = input_data.get_batch(train_img, train_label, IMG_W, IMG_H, BATCH_SIZE, CAPACITY)
 
+# 调用model方法得到返回值, 进行变量赋值
 train_logits = model.cnn_inference(train_batch, BATCH_SIZE, N_CLASSES)
 train_loss = model.losses(train_logits, train_label_batch)
 train_op = model.training(train_loss, learning_rate)
@@ -37,9 +38,9 @@ train_acc = model.evaluation(train_logits, train_label_batch)
 
 summary_op = tf.summary.merge_all()  # 将所有summary全部保存到磁盘，以便tensorboard显示
 
-accuracy_list = []
-loss_list = []
-step_list = []
+accuracy_list = []   # 记录准确率(每50步存一次)
+loss_list = []       # 记录损失值(每50步存一次)
+step_list = []       # 记录训练步数(每50步存一次)
 
 
 with tf.Session() as sess:
