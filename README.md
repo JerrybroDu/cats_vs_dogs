@@ -24,6 +24,5 @@ tf.disable_v2_behavior()
 
 ## Donate
 如果你觉得这个项目帮助到了你，你可以帮作者买一杯果汁表示鼓励 :tropical_drink:
-![DonateWechat](./image/Wechat.jpg)
-![DonateAlipay](./image/Alipay.jpg)
+![Donate](./image/Donate.png)
 
